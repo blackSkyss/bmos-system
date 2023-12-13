@@ -1,0 +1,25 @@
+
+
+.card--option {
+    display: inline;
+    position: relative;
+}
+
+.card--option .card--number{
+    font-size: 15px;
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    padding-left: 5px;
+    border: 1px solid #F77400;
+    border-radius: 50%;
+    padding-right: 5px;
+    background: #F77400;
+    color: #fff;
+    display:none;
+}
+
+.card--option a#Cart-link:hover .card--number{
+    background: #708B77;
+    border: 1px solid #708B77;
+}

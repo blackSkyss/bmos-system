@@ -1,0 +1,136 @@
+﻿@page
+@model BMOS.WebClient.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+@section Styles{
+<link href="~/css/profilepagestyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row">
+         <h2 style="color: #708B77; padding: 0; margin-top: 30px;">Profile</h2>
+    </div>
+    <div class="row profile">
+        <div class="avatar">
+                <img src="" id="displayImage" />
+        </div>
+        <div class="row profileMain">
+                <div class="col-md-6">
+                    <div class="row propertyProfile">
+                        <div class="col-md-3">
+                            <span>Email Address:</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <span id="Email" style="width: 85%; padding: 8px; border: none; border-radius: 3px;"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyProfile">
+                        <div class="col-md-3">
+                            <span>FullName:</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <span id="FullName" style="width: 85%; padding: 8px; border: none; border-radius: 3px;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyProfile">
+                        <div class="col-md-3">
+                            <span>Address:</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <span id="Address" style="width: 85%; padding: 8px; border: none; border-radius: 3px;"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyProfile">
+                        <div class="col-md-3">
+                            <span>Phone:</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <span id="phone" style="width: 85%; padding: 8px; border: none; border-radius: 3px;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyProfile">
+                        <div class="col-md-3">
+                            <span>Gender:</span>
+                        </div>
+                    
+                        <div class="col-md-9 radio-container">
+                            <div class="radio-title-group">
+                                <div class="input-container">
+                                    <input type="radio" name="gender" value="1" disabled /> 
+                                    <div class="radio-title">
+                                        <i class="fa-solid fa-mars" style="color: #f77400;"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="input-container">
+                                    <input type="radio" name="gender" value="0" disabled /> 
+                                    <div class="radio-title">
+                                        <i class="fa-solid fa-venus" style="color: #f77400;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyProfile">
+                        <div class="col-md-3">
+                            <span>Birthday:</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <span id="Birthday" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" ></span>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            
+                        </div>
+                    
+                        <div class="col-md-9 ">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            
+                        </div>
+                    
+                        <div class="col-md-9 updateButton-container">
+                            <a href="/UpdateProfile" class="btn btn-update">Update</a> <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+@section Scripts{
+<script src="~/js/Profile.js"></script>
+}

@@ -1,0 +1,59 @@
+﻿@page
+@model BMOS.WebClient.Store.Pages.StoreOwner.CustomersModel
+@{
+    ViewData["Title"] = "Customer Accounts";
+    ViewData["Page"] = "CustomerAccounts";
+    ViewData["Role"] = "StoreOwner";
+}
+@section Styles{
+    <link href="~/css/staffdashboardpageStyle.css" rel="stylesheet" />
+    <link href="~/css/storeownercustomerpageStyle.css" rel="stylesheet" />
+}
+    <div class="tabular--wrapper">
+        <div class="container">
+            <div class="search-container customers--search">
+                <form method="get" onsubmit="return SearchCustomersName()">
+                    <input type="text" id="searchCustomers" placeholder="Search customer name......" />
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="row">
+                <div>
+                    <table class="table table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">FullName</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="CustomersTable">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <div></div>
+                    <div class="numberPages">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="numberOfBirdFoods">
+                        <label for="numberOfBirdFoods"><strong>Customers:</strong></label>
+                        <select id="numberOfBirdFoods">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts{
+    <script src="~/js/customers.js"></script>
+}

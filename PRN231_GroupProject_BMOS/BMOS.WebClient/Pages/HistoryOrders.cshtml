@@ -1,0 +1,47 @@
+﻿@page
+@model BMOS.WebClient.Pages.HistoryOrdersModel
+@{
+    ViewData["Title"] = "History Orders";
+}
+@section Styles{
+    <link href="~/css/historyorderspagestyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row historyOrders-Header">
+        <h1>History Orders</h1>
+    </div>
+    <div class="row">
+        <table class="table table-hover text-center">
+            <thead>
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Ordered Date</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Order Status</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="ordersTable">
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination">
+        <div></div>
+        <div class="numberPages">
+            <ul>
+            </ul>
+        </div>
+        <div class="numberOfBirdFoods">
+            <label for="numberOfBirdFoods"><strong>Orders:</strong></label>
+            <select id="numberOfBirdFoods">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/HistoryOrders.js"></script>
+}

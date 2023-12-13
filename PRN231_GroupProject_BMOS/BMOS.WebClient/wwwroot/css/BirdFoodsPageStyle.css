@@ -1,0 +1,110 @@
+﻿
+.birdFoodList{
+    margin-top: 30px;
+}
+
+.birdFoodItem {
+    padding: 5px 15px 30px 15px;
+}
+
+.birdFoodItem a{
+    padding: 0 10px;
+
+}
+
+.birdFoodItem a div{
+    border: 0.5px solid #fff;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    box-shadow: 3px 6px 14px 0.5px #708b77;
+}
+
+.link-birdFoodItem:hover .btn-birdFoodItem {
+    background-color: #708b77;
+    color: #fff;
+}
+
+
+.pagination {
+    display: flex;
+    text-align: center;
+    margin: 50px 30px 60px;
+    user-select: none;
+    justify-content: space-between;
+}
+
+.pagination ul li {
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+
+.pagination ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 40px;
+    background: none;
+    border: none;
+}
+
+.previous-page, .next-page {
+    background: #708B77;
+    width: 100px;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.previous-page:hover{
+    transform: translateX(-5px);
+}
+
+.next-page:hover{
+    transform: translateX(5px);
+}
+
+.curent-page, .dots {
+    background: #e2e8e4;
+    width: 60px;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background: #708b77;
+}
+
+.disable {
+    background: #e2e8e4;
+}
+
+.birdFoods-Header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top:100px;
+    margin-bottom: 50px;
+}
+
+#numberOfBirdFoods {
+    width: 80px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #E2E8E4;
+}
+
+#searchBirdFoods{
+    width: 500px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+#filterBirdFoods {
+    width: 170px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #E2E8E4;
+}

@@ -1,0 +1,53 @@
+﻿@page "{id?}"
+@model BMOS.WebClient.Pages.BirdFoodModel
+@{
+    ViewData["title"] = "Bird Food Detail";
+    ViewData["ActiveSegment"] = "Bird Foods";
+}
+@section Styles{
+    <link href="~/css/birdfoodPageStyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row">
+        <div class="left">
+            <div class="mainImage">
+                <img src="" class="slide" />
+            </div>
+            <div class="row option image-item">
+            </div>
+        </div>
+        <div class="right">
+            <h2 id="productName"></h2>
+            <div class="birdFoodPrice-container"><strong class="birdFoodPrice-title">price: </strong><span id="birdFoodPrice" style="color: #f77400; font-weight:bold;"></span> <strong class="birdFoodPrice-unit">VNĐ / 1 Kilogram</strong></div>
+            <h5><strong>Product Details</strong></h5>
+            <div class="productDetails">
+            </div>
+        </div>
+    </div>
+    <div class="birdFoodHeader">
+        <div>
+            <span><strong id="numberOfMeals"></strong> <strong>Meal(s)</strong></span> 
+        </div>
+    </div>
+    <div class="row birdMeals--container">
+    </div>
+    <div class="pagination">
+           <div></div>
+            <div class="numberPages">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfBirdMeals">
+                <label for="numberOfBirdMeals"><strong>Meals:</strong></label>
+                <select id="numberOfBirdMeals">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="48">48</option>
+                    <option value="56">56</option>
+                </select>
+            </div>
+     </div>
+</div>
+@section Scripts{
+<script src="~/js/birdFood.js"></script>
+}

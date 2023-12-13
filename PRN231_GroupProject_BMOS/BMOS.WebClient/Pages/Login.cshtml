@@ -1,0 +1,59 @@
+﻿@page
+@model BMOS.WebClient.Pages.LoginModel
+@{
+    ViewData["Login"] = "Login";
+}
+@section Styles{
+    <link href="~/css/LoginPagestyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row AuthenticationBox">
+        <div class="col-md-7 loginBox">
+            <div class="loginBox-Header">
+                <i class="fa-solid fa-user" style="color: #f77400;"></i> <span>Login</span>
+            </div>
+            <div class="loginBox-Body">
+                <span id="LoginErrors" class="text-danger text-center mb-3" style="display: block;"></span>
+                <form method="post" onsubmit="return LoginForm()">
+                    <div class="row loginBox-Body-emailAddress">
+                        <span class="col-md-3">Email Address</span>
+                        <div class="col-md-9">
+                            <input type="text" id="email" class="loginBox-Body-input" />
+                            <span id="EmailErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <span class="col-md-3">Password</span>
+                        <div class="col-md-9">
+                            <input type="password" id="password" class="loginBox-Body-input" />
+                            <span id="PasswordErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row loginBox-Button">
+                        <span class="col-md-3"></span>
+                        <div class="col-md-9">
+                            <input type="submit" class="btn btn-authentication" value="Login" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-5 registerBoxMain">
+            <div class="registerBox">
+                <div class="loginBox-Header">
+                    <i class="fa-solid fa-user-plus" style="color: #f77400;"></i> <span>New Customers</span>
+                </div>
+                <div class="loginBox-Body">
+                    <span>Create an account to save your details for next time! Save your details and view your past orders.</span>
+                    <div class="row loginBox-Button justify-content-center">
+                        <a href="/Register" class="btn btn-authentication" value="Login" >Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+<script src="~/js/Login.js"></script>
+}

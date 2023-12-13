@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="~/Images/BMOSLogo.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/landingPageStyle.css" rel="stylesheet" />
+    <link href="~/css/loadingStyle.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 logo">
+                    <img src="~/images/bmoslanding.png" class="bmos-logo" />
+                </div>
+                <div class="col-md-6">
+                    @*search-bar
+                    <form method="get" class="row">
+                        <input type="text" class="col-md-11 search-input" placeholder="Search Our Meals..." />
+                        <button type="submit" class="col-md-1 btn btn-link" ><i class="fa fa-magnifying-glass" style="color: #f77400;"></i></button>
+                    </form>*@
+                </div>
+                <div class="col-md-4 option-authentication">
+                    <div style="display: inline;" class="card--option">
+                        <a id="Cart-link" href="/Cart" style="color: #708b77;">
+                            <i class="fa fa-cart-shopping"></i>
+                            <span>Cart</span>
+                            <span class="card--number" style="color: #fff;"></span>
+                        </a>
+                    </div>
+                    <a href="/Login" style="color: #708b77;" id="unauthentication">
+                        <i class="fa-brands fa-earlybirds"></i>
+                        <span>Account</span>
+                    </a>
+                    <a class="close" style="color: #708b77; display: none;" onclick="toggleMenu()" id="authentication">
+                        <i class="fa-brands fa-earlybirds close"></i>
+                        <span class="close" id="customerName"></span>
+                    </a>
+                    <div class="sub-meanu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <a href="/Profile" class="sub-menu-link">
+                                <i class="fa-solid fa-user"></i>
+                                <p>Profile</p>
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <a href="/Wallet" class="sub-menu-link">
+                                <i class="fa-solid fa-wallet"></i>
+                                <p>Wallet</p>
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <a href="/HistoryOrders" class="sub-menu-link">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                <p>History Orders</p>
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                            <a onclick="Logout()" class="sub-menu-link">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <p>Log Out</p>
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow p-0">
+            <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    @{
+                        string activeSegment = ViewData["ActiveSegment"] as string;
+                        string active = "active";
+                    }
+                    <ul class="navbar-nav flex-grow-1 row text-center">
+                        <li class="nav-item col-md-4 @if(activeSegment != null && activeSegment.ToLower().Equals("home")){@active}">
+                            <a class="text-uppercase" asp-area="" asp-page="/LandingPage">Home</a>
+                        </li>
+                        <li class="nav-item col-md-4 @if(activeSegment != null && activeSegment.ToLower().Equals("bird foods")){@active}">
+                            <a class="text-uppercase" asp-area="" asp-page="/BirdFoods">Bird Foods</a>
+                        </li>
+                        <li class="nav-item col-md-4 @if(activeSegment != null && activeSegment.ToLower().Equals("bird meals")){@active}">
+                            <a class="text-uppercase" asp-area="" asp-page="/BirdMeals">Bird Meals</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        @await RenderSectionAsync("Banner", required: false)
+    </header>
+    <main role="main" class="pb-3">
+            @RenderBody()
+    </main>
+    <div class="loading--part">
+                <div class="loading--container">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <span class="loading">Loading...</span>
+                </div>
+   </div>
+
+    <footer class="footer text-black">
+        <div class="container">
+            &copy; Copyright 2023 BMOS Team
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/62731e1e20.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

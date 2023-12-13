@@ -1,0 +1,122 @@
+﻿
+
+.historyOrderDetail-Header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #708B77;
+}
+
+.card{
+    padding: 0;
+}
+
+.card.customerInformation{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.card.orderInformation{
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.card .card-header{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #708B77;
+}
+
+
+.card.customerInformation .card-body,  .card.orderInformation .card-body {
+    padding-left: 80px; 
+}
+
+.card .card-body .information{
+    margin-bottom: 15px;
+}
+
+.card .card-body .information label {
+    font-weight: bold;
+}
+
+.card .card-body .information span#fullName {
+    margin-left: 50px;
+}
+
+.card .card-body .information span#email {
+    margin-left: 80px;
+}
+
+.card .card-body .information span#address {
+    margin-left: 60px;
+}
+
+.card .card-body .information span#phone {
+    margin-left: 73px;
+}
+
+.card .card-body .information span#orderId {
+    margin-left: 120px;
+}
+
+.card .card-body .information span#orderedDate {
+    margin-left: 80px;
+}
+
+.card .card-body .information span#orderTotal {
+    margin-left: 145px;
+}
+
+.card .card-body .information span#orderStatus {
+    margin-left: 90px;
+}
+
+.card.orderDetail{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+footer{
+    margin-top: 20px;
+}
+
+.card.orderTransactions{
+    margin-top: 20px;
+}
+
+#confirmButton {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #F77400;
+    color: #fff;
+    padding: 10px 50px;
+}
+
+#confirmCancel {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #708B77;
+    color: #fff;
+    margin-left: 15px;
+    padding: 10px 50px;
+}
+
+.ActionButtons {
+    display: flex;
+    justify-content: center;
+}
+
+#confirmButton:hover {
+    background: #708B77;
+}
+
+#confirmCancel:hover{
+    background: #F77400;
+}

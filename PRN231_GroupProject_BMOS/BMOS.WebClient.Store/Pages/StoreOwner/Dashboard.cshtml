@@ -1,0 +1,93 @@
+﻿@page
+@model BMOS.WebClient.Store.Pages.StoreOwner.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+    ViewData["Page"] = "Dashboard";
+    ViewData["Role"] = "StoreOwner";
+}
+@section Styles {
+    <link href="~/css/staffdashboardPageStyle.css" rel="stylesheet" />
+}
+<div class="card--container">
+    <div class="card--wrapper">
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Customers
+                    </span>
+                    <span class="amount-value" id="AmountCustomers">
+                    </span>
+                </div>
+                <i class="fa-solid fa-boxes-stacked icon"></i>
+            </div>
+        </div>
+
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Staffs
+                    </span>
+                    <span class="amount-value" id="AmountStaffs">
+                    </span>
+                </div>
+                <i class="fa-solid fa-receipt icon"></i>
+            </div>
+        </div>
+
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Meals
+                    </span>
+                    <span class="amount-value" id="AmountMeals">
+                    </span>
+                </div>
+                <i class="fa-solid fa-file-invoice-dollar icon"></i>
+            </div>
+        </div>
+
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Products
+                    </span>
+                    <span class="amount-value" id="AmountProducts">
+                    </span>
+                </div>
+                <i class="fa-solid fa-file-invoice icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card-profits">
+        <div class="products--card profits">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Profits In This Month
+                    </span>
+                    <span class="amount-value" id="AmountProfits">
+                    </span>
+                </div>
+                <i class="fa-solid fa-money-bill-wave icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="chart">
+    <div class="chart-header">
+        <h2>Earnings (past 12 months)</h2>
+        <select id="ProfitsYears">
+        </select>
+    </div>
+    <div class="lineChart"><canvas id="lineChart" style="width: 500px; height: 300px;"></canvas></div>
+</div>
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/js/storeownerdashboardPage.js"></script>
+}

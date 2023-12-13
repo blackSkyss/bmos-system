@@ -1,0 +1,112 @@
+﻿
+
+.avatar {
+    width: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #708B77;
+}
+
+
+.row {
+    --bs-gutter-x: 0rem;
+    align-content:center;
+}
+
+.profile {
+    margin-top: 15px;
+    background-color: #E2E8E4;
+    padding: 45px;
+    border-radius: 5px;
+}
+
+
+.profile .profileMain{
+    margin-top: 50px;
+}
+
+.propertyProfile {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.radio-container {
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-title-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-container{
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+}
+
+.input-container:first-child{
+    margin-right: 50px;
+}
+
+.input-container input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+
+.input-container .radio-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid #708B77;
+    font-size: 25px;
+    border-radius: 8px;
+    transition: all 300ms ease;
+    padding: 15px;
+}
+
+.input-container input:checked + .radio-title{
+    background-color: #708B77;
+    box-shadow: 0 0 12px #708B77;
+}
+
+.input-container input:hover + .radio-title{
+    box-shadow: 0 0 12px #708B77;
+}
+
+.btn-update {
+    background-color: #f77400;
+    padding: 5px 50px;
+}
+
+.updateButton-container {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.updateButton-container .btn-update{
+    margin-right: 5px;
+    color: #fff;
+}
+
+.updateButton-container .btn-update:hover {
+    background-color: #708B77;
+}

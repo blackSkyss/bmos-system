@@ -1,0 +1,277 @@
+﻿
+
+.mealTitle{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.mealTitle input#mealTitle{
+    border: 1px solid #000;
+    padding: 8px;
+    margin-left: 200px;
+    width: 800px;
+    border-radius: 8px;
+}
+
+.mealStatus {
+    margin-bottom: 35px;
+}
+
+.mealStatus select#mealStatus{
+    border: 1px solid #000;
+    padding: 8px;
+    margin-left: 183px;
+    width: 120px;
+    border-radius: 8px;
+}
+
+.mealDesciption {
+    margin-bottom: 35px;
+}
+
+.mealDesciption .descriptionTitle{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.mealImages span{
+    margin-bottom: 10px;
+    display: block;
+}
+
+.productImages-container {
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #ebe9e9;
+    margin-bottom: 30px;
+}
+
+.productImages-container .productImages-header{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.productImages-container .productImages-header p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #708b77;
+}
+
+.upload-box {
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    border: 2px dashed #708b77;
+    color: #c8c9dd;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.upload-box .select {
+    color: #5256ad;
+    margin-left: 7px;
+    cursor: pointer;
+}
+
+.upload-box .select.hide{
+    display: none;
+}
+
+.upload-box input{
+    display: none;
+}
+
+.upload-box.dragover{
+    border-style: solid;
+    color: #c8c9dd;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.34);
+}
+
+.upload-box.dragover .inner{
+    font-size: 15px;
+}
+
+.productImages-body{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    height: auto;
+    margin-top: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.productImages-body .image{
+    height: 85px;
+    width: 85px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0,0 ,0.15);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 7px;
+    margin-right: 7px;
+}
+
+.productImages-body .images:nth-child(4n){
+    margin-right: 0;
+}
+
+.productImages-body .image img{
+    height: 100%;
+    width: 100%;
+}
+
+.productImages-body .image span{
+    position: absolute;
+    top: -4px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--blue);
+}
+
+.productImages-body .image span:hover{
+    opacity: 0.8;
+}
+
+
+.selectProductsMealTitle {
+    color: #708b77;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#searchProducts {
+    background: #e2e8e4;
+    padding: 10px;
+    width: 500px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.search-container button{
+    padding: 10px;
+    background: #708B77;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+.search-container button:hover{
+    background: #c8c9dd;
+    color: #708B77;
+}
+.col-lg-3{
+    margin-bottom: 15px;
+}
+.productItem {
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+.productItem a span.titleProduct{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.productItem a span.productPrice{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.productItem span.productQuantity{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.productItem span.productQuantity input{
+    border: 1px solid #000;
+    width: 70px;
+    margin-left: 10px;
+    border-radius: 8px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.productItem a.BtnSelect{
+    display: block;
+    padding: 10px;
+    width: 150px;
+    background: #f77400;
+    color: #fff;
+    border-radius:8px;
+    margin: auto;
+}
+
+.productItem a.BtnSelect:hover{
+    background: #708b77;
+}
+
+.productItem button{
+    display: block;
+    padding: 10px;
+    width: 150px;
+    background: #f77400;
+    color: #fff;
+    border-radius:8px;
+    margin: auto;
+}
+
+.productItem button:hover{
+    background: #708b77;
+}
+
+.TotalCreateMeal {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #e2e8e4;
+    z-index:9;
+    padding: 15px 15px;
+    line-height: 40px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.proceed .btn-proceed {
+    display: block;
+    margin: auto;
+    padding: 15px;
+    width: 200px;
+    color: #fff;
+    background: #f77400;
+}
+
+.proceed .btn-proceed:hover{
+    background: #708b77;
+}

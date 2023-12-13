@@ -1,0 +1,47 @@
+﻿@page
+@model BMOS.WebClient.Pages.CardModel
+@{
+    ViewData["Title"] = "Cart";
+}
+@section Styles{
+    <link href="~/css/cardpageStyle.css" rel="stylesheet" />
+}
+    <div class="container">
+        <div class="row">
+            <h1 class="cart-title">Cart</h1>
+            <div class=" row cart-meals">
+                <div class="col-lg-9 right">
+                    <div class="headRow">
+                        <div class="col1">Description</div>
+                        <div class="col2">Quantity</div>
+                        <div class="col3">Price</div>
+                        <div class="col4">Total</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="bodyRow">
+                    </div>
+                    <div class="clear"></div>
+                    <a class="btn ContinueShopping" href="/LandingPage" title="Continue Shopping">Continue Shopping</a>
+                    <a class="btn EmptyCart" onclick="EmptyCart()">Empty Cart</a>
+                </div>
+                <div class="col-lg-3 left">
+                    <div class="checkoutprices">
+                        <div class="row headrow">Summary</div>
+                        <div class="row sub">
+                            <div class="col-left">Total</div>
+                            <div class="col-right" id="total"></div>
+                        </div>
+                        <a class="btn orange" onclick="Checkout()">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cartActions">
+        </div>
+        <div class="cart-empty">
+            <span>YOU HAVE NO ITEMS IN YOUR CART</span>
+        </div>
+    </div>
+    @section Scripts{
+        <script src="~/js/cart.js"></script>
+    }

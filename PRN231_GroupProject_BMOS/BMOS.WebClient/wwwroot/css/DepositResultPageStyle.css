@@ -1,0 +1,85 @@
+﻿
+main {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    margin-top: 0px;
+}
+
+.deposit-Box-success {
+    background: #ffffff;
+    padding: 38px;
+    border-radius: 5px;
+    margin: auto;
+    width: 600px;
+    display: none;
+}
+
+.deposit-Box-failed {
+    background: #ffffff;
+    padding: 75px;
+    border-radius: 5px;
+    margin: auto;
+    width: 600px;
+    display: none;
+}
+
+
+.deposit-Box-success .deposit-Box-header {
+    text-align: center;
+}
+
+.deposit-Box-failed .deposit-Box-header {
+    text-align: center;
+}
+
+.deposit-Box-success .deposit-Box-header img{
+    width: 250px;
+    height: 250px;
+}
+
+.deposit-Box-success .deposit-Box-body{
+    text-align:center;
+    margin-top: -70px;
+}
+
+.deposit-Box-failed .deposit-Box-body {
+    text-align: center;
+}
+
+.deposit-Box-success .deposit-Box-body span.notifycation-header{
+    font-weight: bold;
+}
+
+.deposit-Box-failed .deposit-Box-body span.notifycation-header {
+    font-weight: bold;
+}
+
+.deposit-Box-success .deposit-Box-body span#amountMoney{
+    color: #F77400;
+    margin-right: 5px;
+}
+
+.deposit-Box-success .deposit-Box-body span.notification-message{
+    display: flex;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.deposit-Box-failed .deposit-Box-body span.notification-message {
+    display: block;
+}
+
+.btn-goToWallet {
+    background: #708B77;
+    color: #fff;
+}
+
+.btn-goToWallet:hover{
+    background: #F77400;
+    color: #ffffff;
+}

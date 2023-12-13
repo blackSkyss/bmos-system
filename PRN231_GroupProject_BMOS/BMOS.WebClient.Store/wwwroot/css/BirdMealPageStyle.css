@@ -1,0 +1,225 @@
+﻿
+.left, .right{
+    width: 50%;
+    margin-top: 30px;
+}
+
+.image-item{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mainImage {
+    width: auto;
+    height: auto;
+    border: 1px solid #d6d6d6;
+}
+
+.mainImage img{
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+.option img {
+    width: 100px;
+    height: 100px;
+    margin-left: 12px;
+    margin-right: 12px;
+    image-rendering: pixelated;
+}
+
+.imgageActive {
+    border: 1px solid #d6d6d6;
+}
+
+.option {
+    margin-top: 10px;
+}
+
+.right h2 {
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #708b77;
+}
+
+.right .birdMealPrice-container{
+    margin-top: 40px;
+    font-size: 17px;
+}
+
+.right .birdMealPrice-container .birdMealPrice-title{
+    text-transform: uppercase;
+    color: #708b77;
+}
+
+.right .birdMealPrice-container .birdMealPrice-unit {
+    color: #708b77;
+}
+
+.right h5 {
+    font-size: 19px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    color: #708b77;
+}
+
+.right .productDetails{
+    font-size: 0.85em;
+}
+
+.image-container{
+    height: 320px;
+    max-width: 250px;
+    width: 100%;
+}
+
+.image-container .carousel{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 10px solid #fff;
+    border-radius: 18px;
+}
+
+.wrapper{
+    max-width: 300px;
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid #d6d6d6;
+}
+
+.addToCart-container {
+    background: #E2E8E4;
+    padding: 50px;
+    margin-top: 25px;
+}
+
+.addToCart-container span{
+    margin-right: 30px;
+}
+
+.addToCart-container input{
+    width: 80px;
+    margin-right: 50px;
+}
+
+.addToCart-container button {
+    background: #f77400;
+    color: #fff;
+    border: 1px solid #f77400;
+    padding: 10px 80px;
+    border-radius: 5px;
+}
+
+.addToCart-container button:hover{
+    background: #708b77;
+    border: 1px solid #708b77;
+}
+
+.MealStatus {
+    color: #f77400;
+    display: inline;
+}
+
+.MealStatus.OutOfStock {
+    display: none;
+    margin-left: 15px;
+}
+
+.MealStatus.Instock{
+    margin-left: 15px;
+}
+
+.productMeals{
+    margin-top: 50px;
+    color: #708b77;
+}
+
+.productMeals .ProductMeals-Header{
+    margin-bottom: 15px;
+}
+
+
+    .birdMealItem .birdFoodItem-container a {
+        text-decoration: none;
+    }
+
+.birdMealItem .birdFoodItem-container {
+    border-radius: 15px;
+    padding-bottom: 30px;
+    box-shadow: 3px 6px 14px 0.5px #708b77;
+}
+
+.birdMealItem {
+    margin-bottom: 1.2rem;
+}
+
+.birdFoodItem-container img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.birdFoodItem-container .title {
+    color: #708b77;
+    padding: 0px 15px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    display: block;
+    min-height: 50px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.birdFoodItem-container .price {
+    display: block;
+    padding: 0px 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #f77400;
+    text-align:center;
+}
+
+.birdFoodItem-container div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.birdFoodItem-container div label {
+    margin-left: 15px;
+    font-size: 1rem;
+    color: #f77400;
+}
+.birdFoodItem-container div #quality {
+    width: 60px;
+    padding: 0;
+}
+
+.birdFoodItem-container .btn-BirdMeal {
+    background: #f77400;
+    color: #fff;
+    margin-right: 15px;
+    width: 120px;
+    margin: auto;
+    display: block;
+}
+
+.birdFoodItem-container a:hover .btn-BirdMeal {
+    background: #708b77;
+}
+

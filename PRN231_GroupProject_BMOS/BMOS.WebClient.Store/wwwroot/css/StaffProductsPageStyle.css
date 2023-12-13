@@ -1,0 +1,180 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+body {
+    display: flex;
+}
+
+.tabular--wrapper {
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+.table-container {
+    width: 100%;
+}
+
+td a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+}
+
+td a:hover {
+    color: #000;
+}
+
+td button{
+    background: none;
+    font-size: 17px;
+}
+
+.pagination {
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+    user-select: none;
+    justify-content: space-between;
+}
+
+.pagination ul li {
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+
+.pagination ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 40px;
+    background: none;
+    border: none;
+}
+
+.previous-page, .next-page {
+    background: #708B77;
+    width: 100px;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.previous-page:hover{
+    transform: translateX(-5px);
+}
+
+.next-page:hover{
+    transform: translateX(5px);
+}
+
+.curent-page, .dots {
+    background: #e2e8e4;
+    width: 60px;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background: #708b77;
+}
+
+.disable {
+    background: #e2e8e4;
+}
+
+.birdFoods-Header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top:100px;
+    margin-bottom: 50px;
+}
+
+#numberOfBirdFoods {
+    width: 80px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #E2E8E4;
+}
+
+#filterBirdFoods {
+    width: 170px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #E2E8E4;
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-container.orders{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+
+.search-container form {
+    width: 90%;
+    max-width: 500px;
+    height: 40px;
+    background: #e2e8e4;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+#searchProducts {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+.search-container form button{
+    padding: 0 40px;
+    height: 100%;
+    background: #708B77;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+.search-container form button:hover{
+    background: rgb(1 1 1 / 10%);
+    color: #708B77;
+}

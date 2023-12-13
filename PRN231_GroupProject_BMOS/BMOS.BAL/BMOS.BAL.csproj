@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BMOS.DAL\BMOS.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\MealImages\" />
+    <Folder Include="DTOs\ProductImages\" />
+    <Folder Include="DTOs\OrderTransactions\" />
+    <Folder Include="DTOs\Roles\" />
+    <Folder Include="DTOs\Tokens\" />
+    <Folder Include="DTOs\Wallets\" />
+    <Folder Include="Validators\Meals\" />
+    <Folder Include="Validators\MealImages\" />
+    <Folder Include="Validators\OrderTransactions\" />
+    <Folder Include="Validators\Wallets\" />
+    <Folder Include="Validators\Tokens\" />
+    <Folder Include="Validators\Roles\" />
+    <Folder Include="Validators\ProductMeals\" />
+    <Folder Include="Validators\ProductImages\" />
+    <Folder Include="Validators\OrderDetails\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Firebase.Auth" Version="1.0.0" />
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.19" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="Quartz" Version="3.6.2" />
+    <PackageReference Include="Quartz.Extensions.Hosting" Version="3.6.2" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,59 @@
+﻿@page "{id?}"
+@model BMOS.WebClient.Store.Pages.StoreOwner.CustomerModel
+@{
+    ViewData["Title"] = "Customer";
+    ViewData["Page"] = "CustomerAccounts";
+    ViewData["Role"] = "StoreOwner";
+}
+@section Styles{
+    <link href="~/css/staffdashboardpageStyle.css" rel="stylesheet" />
+    <link href="~/css/storeownercustomerpagestyle.css" rel="stylesheet" />
+}
+    <div class="tabular--wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 avatar--container">
+                    <img src="" id="Avatar" />
+                    <span id="Email"></span>
+                </div>
+                <div class="col-lg-10 information--container">
+                    <h1>Profile</h1>
+                    <div class="fullName">
+                        <span class="fullNameTitle">FullName</span>
+                        <span id="FullName"></span>
+                    </div>
+                    
+                    <div class="phone">
+                        <span class="phoneTitle">Phone</span>
+                        <span id="Phone"></span>
+                    </div>
+                    
+                    <div class="gender">
+                        <span class="genderTitle">Gender</span>
+                        <span id="Gender"></span>
+                    </div>
+                    
+                    <div class="birthDate">
+                        <span class="birthDateTitle">Birthday</span>
+                        <span id="Birthday"></span>
+                    </div>
+                    
+                    <div class="address">
+                        <span class="addressTitle">Address</span>
+                        <span id="Address"></span>
+                    </div>
+                    
+                    <div class="status">
+                        <span class="statusTitle">Status</span>
+                        <span id="Status"></span>
+                    </div>
+                    <div class="BtnActions">
+                        <a href="/StoreOwner/Customers" class="btn btn-outline-info btn-back">Back To List Customers</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts{
+    <script src="~/js/customer.js"></script>
+}

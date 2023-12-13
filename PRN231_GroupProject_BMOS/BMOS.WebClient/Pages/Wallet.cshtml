@@ -1,0 +1,80 @@
+﻿@page
+@model BMOS.WebClient.Pages.WalletModel
+@{
+    ViewData["Title"] = "Wallet";
+}
+@section Styles{
+    <link href="~/css/walletpageStyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row card">
+        <div class="card-header">
+            <small>Total Balance</small><br />
+            <span id="totalBalance"></span><br />
+            <button class="btn btn-deposit" id="openDepositBox">Deposit</button>
+        </div>
+        <div class="card-body">
+                <div class="mb-3">
+                    <h4 style="color: #708B77;">Wallet Transactions:</h4>
+                </div>
+                <div>
+                    <table class="table table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Recharge Time</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Content</th>
+                                <th scope="col">Transaction Type</th>
+                                <th scope="col">Recharge Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="TransactionsTable">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+           <div></div>
+            <div class="numberPages">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfBirdFoods">
+                <label for="numberOfBirdFoods"><strong>Transactions:</strong></label>
+                <select id="numberOfBirdFoods">
+                    <option value="5">5</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<div class="bg-box close">
+    <div class="deposit-Box">
+        <i class="fa-solid fa-xmark close" id="closeDepositBox"></i>
+        <div class="deposit-Header">
+            <h4>Deposit Into Your Wallet</h4>
+        </div>
+        <form method="post" onsubmit="return DepositForm()">
+            <div class="boxTypeMoney">
+                <label>Amount</label><br/>
+                <input type="text" data-type="currency" id="numberOfMoney" />
+                <span class="AmountErrors text-danger"></span>
+            </div>
+            <div class="boxTypeConfirm">
+                <label>Type <strong>"Agree"</strong> in the confirmation box to sure that you want to deposit in your wallet.</label><br />
+                <input type="text" id="confirmationText" />
+                <span class="ConfirmStringErrors text-danger"></span>
+            </div>
+            <div class="actions">
+                <input type="submit" class="btn btn-deposit" />
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts{
+<script src="~/js/WalletPage.js"></script>
+}

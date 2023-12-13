@@ -1,0 +1,91 @@
+﻿@page "{id?}"
+@model BMOS.WebClient.Store.Pages.Staff.UpdateMealModel
+@{
+    ViewData["Title"] = "Update Meal";
+    ViewData["Page"] = "Meals";
+    ViewData["Role"] = "Staff";
+}
+@section Styles{
+    <link href="~/css/staffdashboardpagestyle.css" rel="stylesheet" />
+    <link href="~/css/createmealpageStyle.css" rel="stylesheet" />
+    <link href="~/css/cardpagestyle.css" rel="stylesheet" />
+}
+<form method="post" onsubmit="return UpdateMealForm()">
+<div class="tabular--wrapper">
+        <div class="mealTitle">
+            <span>Meal Title</span>
+            <input type="text" id="mealTitle" />
+            <span id="TitleErrors" class="text-danger"></span>
+        </div>
+        
+        <div class="mealStatus">
+            <span>Meal Status</span>
+            <select id="mealStatus">
+                <option value="2">Inactive</option>
+                <option value="1">Active</option>
+            </select>
+        </div>
+        <div class="mealDesciption">
+            <span class="descriptionTitle">Description</span>
+            <span id="DescriptionErrors" class="text-danger"></span>
+            <textarea id="mealDescription"></textarea>
+        </div>
+        <div class="mealImages">
+            <span>Meal Images</span>
+            <div class="productImages-container">
+                <div class="productImages-header">
+                    <p>Drag & drop image uploading</p>
+                    <span id="ProductImagesErrors" class="text-danger"></span>
+                    <div class="upload-box">
+                        <span class="inner">Drag & drop image here or</span>
+                        <span class="select">Browse</span>
+                        <input type="file" class="file" multiple />
+                    </div>
+                </div>
+                <div class="productImages-body">
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+<div class="tabular--wrapper">
+    <h3 class="selectProductsMealTitle">SELECT PRODUCTS FOR MEAL:</h3>
+    <span id="ProductMealsErrors" class="text-danger"></span>
+    <div class="search-container">
+            <input type="text" id="searchProducts" oninput="SearchProductNameForm(event)"
+                placeholder="Search meal name......" style="border-bottom-right-radius: 8px; border-top-right-radius: 8px;" />
+    </div>
+    <div class="container">
+        <div class="row products--container">
+        </div>
+    </div>
+    <div class="pagination">
+            <div></div>
+            <div class="numberPages">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfBirdFoods">
+                <label for="numberOfBirdFoods"><strong>Products:</strong></label>
+                <select id="numberOfBirdFoods">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="48">48</option>
+                    <option value="96">96</option>
+                </select>
+            </div>
+        </div>
+</div>
+<div class="tabular--wrapper">
+    <div class="TotalCreateMeal">
+        <div class="selection">Your Selection:&nbsp;<strong><span id="totalProduct">0</span> products</strong></div>
+        <div class="cost">Total: <strong id="totalPrice">0</strong><strong>VNĐ</strong></div>
+    </div>
+    <div class="proceed"><input type="submit" class="btn btn-proceed" id="CreateNewMeal" disabled="disabled" value="Update Meal"></div>
+</div>
+</form>
+@section Scripts{
+    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+    <script src="~/js/updatemealPage.js"></script>
+}

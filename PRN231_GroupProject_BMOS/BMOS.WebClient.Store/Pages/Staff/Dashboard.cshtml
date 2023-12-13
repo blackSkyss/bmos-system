@@ -1,0 +1,228 @@
+﻿@page
+@model BMOS.WebClient.Store.Pages.Staff.DashboardModel
+@{
+    ViewData["Title"] = "Dashboard";
+    ViewData["Page"] = "Dashboard";
+    ViewData["Role"] = "Staff";
+}
+@section Styles{
+    <link href="~/css/StaffDashboardPageStyle.css" rel="stylesheet" />
+}
+@*Cards*@
+<div class="card--container">
+    <div class="card--wrapper">
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Products
+                    </span>
+                    <span class="amount-value" id="productAmount">
+                    </span>
+                </div>
+                <i class="fa-solid fa-boxes-stacked icon"></i>
+            </div>
+        </div>
+        
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Meals
+                    </span>
+                    <span class="amount-value" id="MealAmount">
+                    </span>
+                </div>
+                <i class="fa-solid fa-receipt icon"></i>
+            </div>
+        </div>
+        
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Done Order
+                    </span>
+                    <span class="amount-value" id="DoneOrderAmount">
+                    </span>
+                </div>
+                <i class="fa-solid fa-file-invoice-dollar icon"></i>
+            </div>
+        </div>
+        
+        <div class="products--card">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        New Order
+                    </span>
+                    <span class="amount-value" id="NewOrderAmount">
+                    </span>
+                </div>
+                <i class="fa-solid fa-file-invoice icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="card-profits">
+        <div class="products--card profits">
+            <div class="card--header">
+                <div class="amount">
+                    <span class="title">
+                        Profits In This Month
+                    </span>
+                    <span class="amount-value" id="ProfitInThisMonthAmount">
+                    </span>
+                </div>
+                <i class="fa-solid fa-money-bill-wave icon"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tabular--wrapper">
+    <h3 class="main--title">Bought Products In This Month</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Bought Amount</th>
+                    <th>Units In Stock</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="BoughtProductsTable">
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination">
+           <div></div>
+            <div class="numberPages">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfBirdFoods">
+                <label for="numberOfBirdFoods"><strong>Products:</strong></label>
+                <select id="numberOfBirdFoods">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+</div>
+
+<div class="tabular--wrapper">
+    <h3 class="main--title">Bought Meals In This Month</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Meal ID</th>
+                    <th>Meal Name</th>
+                    <th>Meal Price</th>
+                    <th>Bought Amount</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="BoughtMealsTable">
+            </tbody>
+        </table>
+    </div>
+    <div class="paginationBoughtMeals">
+           <div></div>
+            <div class="numberPagesBoughtMeals">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfBoughtMeals">
+                <label for="numberOfBoughtMeals"><strong>Meals:</strong></label>
+                <select id="numberOfBoughtMeals">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+</div>
+
+<div class="tabular--wrapper">
+    <h3 class="main--title">Expired products in about 10 days</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Units In Stock</th>
+                    <th>Expired Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="ExpiredProductsTable">
+            </tbody>
+        </table>
+    </div>
+    <div class="paginationExpiredProducts">
+           <div></div>
+            <div class="numberPagesExpiredProducts">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfExpiredProducts">
+                <label for="numberOfExpiredProducts"><strong>Meals:</strong></label>
+                <select id="numberOfExpiredProducts" >
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+</div>
+
+<div class="tabular--wrapper">
+    <h3 class="main--title">Expired meals in about 10 days</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Meal ID</th>
+                    <th>Meal Name</th>
+                    <th>Sell Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="ExpiredMealsTable">
+            </tbody>
+        </table>
+    </div>
+    <div class="paginationExpiredMeals">
+           <div></div>
+            <div class="numberPagesExpiredMeals">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfExpiredMeals">
+                <label for="numberOfExpiredMeals"><strong>Meals:</strong></label>
+                <select id="numberOfExpiredMeals">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/staffDashboardPage.js"></script>
+}

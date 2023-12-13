@@ -1,0 +1,41 @@
+﻿@page "{id?}"
+@model BMOS.WebClient.Store.Pages.Staff.ProductModel
+@{
+    ViewData["Title"] = "Product Detail";
+    ViewData["Page"] = "Products";
+    ViewData["Role"] = "Staff"; 
+}
+@section Styles{
+    <link href="~/css/birdfoodPageStyle.css" rel="stylesheet" />
+    <link href="~/css/staffdashboardpageStyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row tabular--wrapper">
+        <div class="left">
+            <div class="mainImage">
+                <img src="" class="slide" />
+            </div>
+            <div class="row option image-item">
+            </div>
+        </div>
+        <div class="right">
+            <h2 id="productName"></h2>
+            <div class="birdFoodPrice-container"><strong class="birdFoodPrice-title">Sell Price: </strong><span id="birdFoodPrice"></span> <strong class="birdFoodPrice-unit">VNĐ / 1 Kilogram</strong></div>
+            <div class="birdFoodPrice-container" style="margin-top: 10px;"><strong class="birdFoodPrice-title">Original Price: </strong><span id="birdFoodOriginalPrice"></span> <strong class="birdFoodPrice-unit">VNĐ / 1 Kilogram</strong></div>
+            <div class="birdFoodPrice-container" style="margin-top: 10px;"><strong class="birdFoodPrice-title">Expired Date:</strong> <span style="color: #000;" id="expiredDate"></span></div>
+            <div class="birdFoodPrice-container" style="margin-top: 10px;"><strong class="birdFoodPrice-title">Total:</strong> <span style="color: #000;" id="total"></span></div>
+            <div class="birdFoodPrice-container" style="margin-top: 10px;"><strong class="birdFoodPrice-title">Status:</strong> <span style="color: #000;" id="status"></span></div>
+            <div class="birdFoodPrice-container" style="margin-top: 10px;"><strong class="birdFoodPrice-title">Imported Date:</strong> <span style="color: #000;" id="importedDate"></span></div>
+            <div class="birdFoodPrice-container" style="margin-top: 10px;"><strong class="birdFoodPrice-title">Modified Date:</strong> <span style="color: #000;" id="modifiedDate"></span></div>
+            <div class="birdFoodPrice-container" style="margin-top: 10px;"><strong class="birdFoodPrice-title">Modified By:</strong> <span style="color: #000;" id="modifiedBy"></span></div>
+            <h5 style="margin-top: 40px;"><strong>Product Details</strong></h5>
+            <div class="productDetails">
+            </div>
+            <div class="button-container">
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/StaffProduct.js"></script>
+}

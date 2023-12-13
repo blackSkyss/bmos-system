@@ -1,0 +1,208 @@
+﻿@page
+@model BMOS.WebClient.Pages.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+@section Styles{
+    <link href="~/css/registerpagestyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row">
+        <h2 style="color: #708B77; padding: 0; margin-top: 30px;">Register</h2>
+    </div>
+    <div class="row registerForm">
+        <form method="post" onsubmit="return RegisterCustomerAccountForm()">
+           <div>
+               <div class="uploadAvatar">
+                <img src="~/images/noprofile.png" id="displayImage" />
+                <div class="round">
+                    <input type="file" id="imageInput" />
+                    <i class="fa-solid fa-upload"></i>
+                </div>
+            </div>
+            <span id="AvatarErrors" class="text-danger text-center" style="display: block;"></span>
+           </div>
+            <div class="row registerFormMain">
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>Email Address</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <input type="text" id="email" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" />
+                            <span id="EmailErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>FullName</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <input type="text" id="fullName" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" />
+                            <span id="FullNameErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>Password</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <input type="password" id="password" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" />
+                            <span id="PasswordErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>Confirm Password</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <input type="password" id="confirmPassword" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" />
+                            <span id="ConfirmPasswordErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>Address</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <input type="text" id="address" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" />
+                            <span id="AddressErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>Phone</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <input type="text" id="phone" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" />
+                            <span id="PhoneErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>Gender</span>
+                        </div>
+                    
+                        <div class="col-md-9 radio-container">
+                            <div class="radio-title-group">
+                                <div class="input-container">
+                                    <input type="radio" name="gender" value="1" checked/> 
+                                    <div class="radio-title">
+                                        <i class="fa-solid fa-mars" style="color: #f77400;"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="input-container">
+                                    <input type="radio" name="gender" value="0" /> 
+                                    <div class="radio-title">
+                                        <i class="fa-solid fa-venus" style="color: #f77400;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            <span>Birth Date</span>
+                        </div>
+                    
+                        <div class="col-md-9">
+                            <input type="date" id="birthDate" style="width: 85%; padding: 8px; border: none; border-radius: 3px;" />
+                            <span id="BirthdayErrors" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            
+                        </div>
+                    
+                        <div class="col-md-9 ">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            
+                        </div>
+                    
+                        <div class="col-md-9 registerButton-container">
+                            <input type="submit" class="btn btn-register" value="Create Account" /> <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            
+                        </div>
+                    
+                        <div class="col-md-9 ">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="row propertyRegister">
+                        <div class="col-md-3">
+                            
+                        </div>
+                    
+                        <div class="col-md-9 registerButton-container">
+                            <span>
+                                Already have an account? <a href="/Login" class="link">Log in</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    <script src="~/js/registerpage.js"></script>
+}

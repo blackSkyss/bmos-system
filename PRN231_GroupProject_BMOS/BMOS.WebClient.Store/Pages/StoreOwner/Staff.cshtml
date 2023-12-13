@@ -1,0 +1,72 @@
+﻿@page "{id?}"
+@model BMOS.WebClient.Store.Pages.StoreOwner.StaffModel
+@{
+    ViewData["Title"] = "Staff";
+    ViewData["Page"] = "StaffAccounts";
+    ViewData["Role"] = "StoreOwner";
+}
+@section Styles{
+    <link href="~/css/staffdashboardpageStyle.css" rel="stylesheet" />
+    <link href="~/css/storeownerstaffpagestyle.css" rel="stylesheet" />
+}
+    <div class="tabular--wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 avatar--container">
+                    <img id="avatar" src="" />
+                    <span id="email"></span>
+                </div>
+                <div class="col-lg-10 information--container">
+                    <h1>Profile</h1>
+                    <div class="fullName">
+                        <span class="fullNameTitle">FullName</span>
+                        <span id="fullname"></span>
+                    </div>
+                    <div class="identityNumber">
+                        <span class="identityNumberTitle">Identity Number</span>
+                        <span id="identityNumber"></span>
+                    </div>
+                    <div class="phone">
+                        <span class="phoneTitle">Phone</span>
+                        <span id="phone"></span>
+                    </div>
+                    
+                    <div class="gender">
+                        <span class="genderTitle">Gender</span>
+                        <span id="gender"></span>
+                    </div>
+                    
+                    <div class="birthDate">
+                        <span class="birthDateTitle">Birthday</span>
+                        <span id="birthday"></span>
+                    </div>
+                    
+                    <div class="address">
+                        <span class="addressTitle">Address</span>
+                        <span id="address"></span>
+                    </div>
+                    
+                    <div class="registerDate">
+                        <span class="registerDateTitle">Register Date</span>
+                        <span id="registerDate"></span>
+                    </div>
+                    
+                    <div class="quitDate">
+                        <span class="quitDateTitle">Quit Date</span>
+                        <span id="quitDate"></span>
+                    </div>
+                    
+                    <div class="status">
+                        <span class="statusTitle">Status</span>
+                        <span id="status"></span>
+                    </div>
+                    <div class="BtnActions">
+                        <a href="/StoreOwner/Staffs" class="btn btn-outline-info btn-back">Back To List Staffs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts{
+    <script src="~/js/staffdetailpage.js"></script>
+}

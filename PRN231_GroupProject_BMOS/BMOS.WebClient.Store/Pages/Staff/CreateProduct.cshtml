@@ -1,0 +1,70 @@
+﻿@page
+@model BMOS.WebClient.Store.Pages.Staff.CreateProductModel
+@{
+    ViewData["Title"] = "Create New Product";
+    ViewData["Page"] = "Products";
+    ViewData["Role"] = "Staff";
+}
+@section Styles{
+    <link href="~/css/staffdashboardpagestyle.css" rel="stylesheet" />
+    <link href="~/css/createproductPageStyle.css" rel="stylesheet" />
+}
+<div class="tabular--wrapper">
+    <form method="post" onsubmit="return CreateProductForm()">
+            <div class="productName">
+                <span>Product Name</span>
+                <input type="text" id="productName" />
+                <span id="ProductNameErrors" class="text-danger"></span>
+            </div>
+
+            <div class="originalPrice">
+                <span>Original Price</span>
+                <input type="text" id="originalPrice" data-type="currency" /> <strong>/ 1 Kilogram (or 1 litre)</strong>
+                <span id="OriginalPriceErrors" class="text-danger"></span>
+            </div>
+
+            <div class="sellPrice">
+                <span>Sell Price</span>
+                <input type="text" id="sellPrice" step="any" data-type="currency" /> <strong>/ 1 Kilogram (or 1 litre)</strong>
+                <span id="SellPriceErrors" class="text-danger"></span>
+            </div>
+
+            <div class="totalProduct">
+                <span>Total</span>
+                <input type="number" id="totalProduct" /> <strong>Kilogram or Litre</strong>
+                <span id="TotalProductErrors" class="text-danger"></span>
+            </div>
+
+            <div class="expiredDate">
+                <span>Expired Date</span>
+                <input type="date" id="expiredDate" />
+                <span id="ExpiredDateErrors" class="text-danger"></span>
+            </div>
+
+            <div class="description">
+                <span class="descriptionLabel">Description</span>
+                <span id="DescriptionErrors" class="text-danger"></span>
+                <textarea id="description"></textarea>
+            </div>
+            <div class="productImages-container">
+                <div class="productImages-header">
+                    <p>Drag & drop image uploading</p>
+                    <span id="ProductImagesErrors" class="text-danger"></span>
+                    <div class="upload-box">
+                        <span class="inner">Drag & drop image here or</span>
+                        <span class="select">Browse</span>
+                        <input type="file" id="productImages" class="file" multiple />
+                    </div>
+                </div>
+                <div class="productImages-body">
+                </div>
+            </div>
+            <div class="BtnActions">
+                <input type="submit" class="btn btn-outline-success" value="Add New Product" />
+            </div>
+    </form>
+</div>
+@section Scripts{
+    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
+    <script src="~/js/createproductPage.js"></script>
+}

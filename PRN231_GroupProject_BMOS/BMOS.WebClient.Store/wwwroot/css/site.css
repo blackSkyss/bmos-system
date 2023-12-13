@@ -1,0 +1,154 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+body{
+    display: flex;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 116px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #ffffff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #708b77;
+}
+
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+
+.sidebar:hover .logo img{
+    margin: auto;
+    transition: all 0.5s ease-out;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+}
+
+.logo {
+    height: 80px;
+    padding: 16px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display:block;
+    transition: all 0.7s ease-out;
+    max-width: 50px;
+}
+
+.sidebar:hover .menu {
+    margin-top: 35px;
+    transition: all 0.5s ease-out;
+}
+
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    transition: all 0.5s ease-out;
+}
+
+
+.menu li{
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, .menuActive {
+    background: rgba(226, 232, 228, 0.4);
+}
+
+.menu a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+}
+
+
+.main--content{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.user--info span strong {
+    margin-left: 8px;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title{
+    color: #708b77;
+}
+
+.main--container{
+    position: relative;
+}

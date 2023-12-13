@@ -1,0 +1,88 @@
+﻿
+
+.AuthenticationBox {
+    margin-top: 100px;
+}
+
+.loginBox {
+    background-color: #E2E8E4;
+    padding-right: 15px;
+    border-radius: 10px;
+    padding: 45px 40px;
+}
+
+
+.loginBox .loginBox-Header{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.loginBox .loginBox-Header span{
+    color: #708b77;
+    margin-left: 30px;
+}
+
+.loginBox .loginBox-Body{
+    padding: 0 100px;
+}
+
+.loginBox .loginBox-Body .loginBox-Body-emailAddress{
+    margin-bottom: 20px;
+}
+
+.loginBox .loginBox-Body .loginBox-Body-input{
+    width: 350px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.loginBox .loginBox-Body .loginBox-Button{
+    margin-top: 30px;
+}
+
+.loginBox .loginBox-Body .btn{
+    width: 350px;
+    background-color: #f77400;
+    color: #fff;
+}
+
+.loginBox .loginBox-Body .btn:hover{
+    background-color: #708b77;
+}
+
+.registerBoxMain {
+    padding-left: 15px;
+    height: 50%;
+}
+
+.registerBoxMain .registerBox {
+    background-color: #E2E8E4;
+    border-radius: 10px;
+    padding: 65px  40px;
+}
+
+.registerBoxMain .registerBox .loginBox-Header {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.registerBoxMain .registerBox .loginBox-Header span {
+    color: #708b77;
+    margin-left: 30px;
+}
+
+
+.registerBoxMain .registerBox .loginBox-Body .loginBox-Button {
+    margin-top: 30px;
+}
+
+.registerBoxMain .registerBox .loginBox-Body .btn:hover{
+    background-color: #708b77;
+}
+
+.registerBoxMain .registerBox .loginBox-Body .btn {
+    width: 350px;
+    background-color: #f77400;
+    color: #fff;
+}

@@ -1,0 +1,62 @@
+﻿@page
+@model BMOS.WebClient.Store.Pages.StoreOwner.StaffsModel
+@{
+    ViewData["Title"] = "Staffs";
+    ViewData["Page"] = "StaffAccounts";
+    ViewData["Role"] = "StoreOwner";
+}
+@section Styles{
+    <link href="~/css/staffdashboardpageStyle.css" rel="stylesheet" />
+    <link href="~/css/storeownercustomerpagestyle.css" rel="stylesheet" />
+}
+    <div class="tabular--wrapper">
+        <div class="container">
+            <div class="search-container">
+                <a href="/StoreOwner/CreateStaff" class="btn btn-outline-success btn-addProduct">Create New Staff</a>
+                <form method="get" onsubmit="return SearchStaffNameForm()">
+                    <input type="text" id="searchStaffs" placeholder="Search staff name......" />
+                    <button>Search</button>
+                </form>
+            </div>
+            <div class="row">
+                <div>
+                    <table class="table table-hover text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">Identity Number</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">FullName</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Register Date</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="staffTable">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <div></div>
+                    <div class="numberPages">
+                        <ul>
+                        </ul>
+                    </div>
+                    <div class="numberOfBirdFoods">
+                        <label for="numberOfBirdFoods"><strong>Staffs:</strong></label>
+                        <select id="numberOfBirdFoods">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts{
+    <script src="~/js/StaffsPage.js"></script>
+}

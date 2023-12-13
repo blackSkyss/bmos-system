@@ -1,0 +1,56 @@
+﻿@page "{id?}"
+@model BMOS.WebClient.Store.Pages.Staff.MealModel
+@{
+    ViewData["Title"] = "Meal Details";
+    ViewData["Page"] = "Meals";
+    ViewData["Role"] = "Staff";
+}
+@section Styles{
+    <link href="~/css/birdMealPageStyle.css" rel="stylesheet" />
+    <link href="~/css/staffdashboardpageStyle.css" rel="stylesheet" />
+}
+<div class="tabular--wrapper">
+    <div class="container">
+    <div class="row">
+        <div class="left">
+            <div class="mainImage">
+                <img src="" class="slide" />
+            </div>
+            <div class="row option image-item">
+            </div>
+        </div>
+        <div class="right">
+            <h2 id="mealTitle"></h2>
+            <div class="birdMealPrice-container">
+                <strong class="birdMealPrice-title">price: </strong><span id="birdMealPrice"></span> <strong class="birdMealPrice-unit">VNĐ</strong>   
+            </div>
+            
+            <div class="birdMealPrice-container" style="margin-top:10px;">
+                <strong class="birdMealPrice-title">Status: </strong><span id="birdMealStatus"></span>  
+            </div>
+            
+            <div class="birdMealPrice-container" style="margin-top:10px;">
+                <strong class="birdMealPrice-title">Modified Date: </strong><span id="birdMealModifiedDate"></span>  
+            </div>
+            <div class="birdMealPrice-container" style="margin-top:10px;">
+                <strong class="birdMealPrice-title">Modified By: </strong><span id="birdMealModifiedBy"></span>  
+            </div>
+            <h5 style="margin-top: 40px;"><strong>Meal Details</strong></h5>
+            <div class="productDetails">
+            </div>
+            <div class="button-container">
+            </div>
+        </div>
+    </div>
+    <div class="row productMeals">
+        <div class="ProductMeals-Header">
+            <h3>Products In Meal</h3>
+        </div>
+        <div class="row products">
+        </div>
+    </div>
+</div>
+</div>
+@section Scripts{
+    <script src="~/js/Staffmeal.js"></script>
+}

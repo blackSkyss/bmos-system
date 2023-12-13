@@ -1,0 +1,44 @@
+﻿@page
+@model BMOS.WebClient.Pages.BirdFoodsModel
+@{
+    ViewData["Title"] = "Bird Foods";
+    ViewData["ActiveSegment"] = "Bird Foods";
+}
+@section Styles{
+    <link href="~/css/birdfoodspagestyle.css" rel="stylesheet" />
+}
+    <div class="container birdFoodList">
+        <div class="birdFoods-Header">
+            <div></div>
+            <div>
+                <input type="text" id="searchBirdFoods" oninput="SearchBirdFoods(event)" placeholder="Search bird food name......" />
+            </div>
+            <div>
+                <select id="filterBirdFoods">
+                    <option value="AZ">Sort Name A to Z</option>
+                    <option value="ZA">Sort Name Z to A</option>
+                </select>
+            </div>
+        </div>
+        <div class="row birdFood--container">
+        </div>
+        <div class="pagination">
+           <div></div>
+            <div class="numberPages">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfBirdFoods">
+                <label for="numberOfBirdFoods"><strong>Foods:</strong></label>
+                <select id="numberOfBirdFoods">
+                    <option value="12">12</option>
+                    <option value="24">24</option>
+                    <option value="48">48</option>
+                    <option value="56">56</option>
+                </select>
+            </div>
+        </div>
+    </div>
+@section Scripts{
+    <script src="~/js/birdfoods.js"></script>
+}

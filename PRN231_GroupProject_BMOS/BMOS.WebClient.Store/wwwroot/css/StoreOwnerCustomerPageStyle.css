@@ -1,0 +1,175 @@
+﻿
+td button {
+    background: none;
+    font-size: 17px;
+}
+
+.avatar--container {
+    border-right: 1px solid #000000;
+    padding-right: 50px;
+    text-align: center;
+}
+.avatar--container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.avatar--container span{
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #808080;
+}
+
+.information--container{
+    padding-left: 50px;
+}
+
+.information--container h1{
+    color: #708B77;
+}
+
+.information--container .fullName{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .phone{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .identityNumber{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .gender{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .birthDate{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .address{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .status{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .fullName span.fullNameTitle {
+    margin-right: 50px;
+}
+
+.information--container .phone span.phoneTitle {
+    margin-right: 80px;
+}
+
+.information--container .gender span.genderTitle {
+    margin-right: 73px;
+}
+
+.information--container .birthDate span.birthDateTitle {
+    margin-right: 63px;
+}
+
+.information--container .address span.addressTitle {
+    margin-right: 63px;
+}
+
+.information--container .status span.statusTitle {
+    margin-right: 80px;
+}
+
+.information--container .identityNumber span.identityNumberTitle {
+    margin-right: 80px;
+}
+
+.information--container .BtnActions{
+    margin-top: 50px;
+    position: relative;
+}
+
+.information--container .BtnActions a.btn-back{
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-container.customers--search{
+    justify-content: end;
+}
+
+.search-container.orders{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+
+.search-container form {
+    width: 90%;
+    max-width: 500px;
+    height: 40px;
+    background: #e2e8e4;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+#searchStaffs {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+#searchCustomers {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+.search-container form button{
+    padding: 0 40px;
+    height: 100%;
+    background: #708B77;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+.search-container form button:hover{
+    background: rgb(1 1 1 / 10%);
+    color: #708B77;
+}

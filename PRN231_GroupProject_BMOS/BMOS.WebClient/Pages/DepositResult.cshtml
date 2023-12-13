@@ -1,0 +1,32 @@
+﻿@page
+@model BMOS.WebClient.Pages.DepositResultModel
+@{
+    ViewData["Title"] = "Deposit Result";
+}
+@section Styles{
+    <link href="~/css/DepositResultPagestyle.css" rel="stylesheet" />
+}
+<div class="deposit-Box-success">
+    <div class="deposit-Box-header">
+            <img src="~/images/success.gif" />
+    </div>
+    <div class="deposit-Box-body">
+        <span class="notifycation-header">Your wallet has been successfully deposited</span><br />
+        <span class="notification-message"><span id="amountMoney"></span>has been deposited to your BMOS wallet. Now you can go to your BMOS wallet to check the total balance.</span><br />
+        <a href="/Wallet" class="btn btn-goToWallet">Go to Wallet</a>
+    </div>
+</div>
+
+<div class="deposit-Box-failed">
+    <div class="deposit-Box-header">
+            <img src="~/images/116621-failed.gif" />
+    </div>
+    <div class="deposit-Box-body">
+        <span class="notifycation-header">Your wallet has been unsuccessfully deposited</span><br />
+        <span class="notification-message">Invalid transaction, please try again.</span><br />
+        <a href="/Wallet" class="btn btn-goToWallet">Go to Wallet</a>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/depositresult.js"></script>
+}

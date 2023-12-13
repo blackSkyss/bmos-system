@@ -1,0 +1,349 @@
+﻿
+td button {
+    background: none;
+    font-size: 17px;
+}
+
+.avatar--container {
+    border-right: 1px solid #000000;
+    padding-right: 50px;
+    text-align: center;
+}
+.avatar--container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.avatar--container span{
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #808080;
+}
+
+.information--container{
+    padding-left: 50px;
+}
+
+.information--container h1{
+    color: #708B77;
+}
+
+.information--container .fullName{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .phone{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .identityNumber{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .gender{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .birthDate{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .address{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .status{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .registerDate{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .quitDate{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.information--container .fullName span.fullNameTitle {
+    margin-right: 135px;
+}
+
+.information--container .phone span.phoneTitle {
+    margin-right: 165px;
+}
+
+.information--container .gender span.genderTitle {
+    margin-right: 160px;
+}
+
+.information--container .birthDate span.birthDateTitle {
+    margin-right: 150px;
+}
+
+.information--container .address span.addressTitle {
+    margin-right: 150px;
+}
+
+.information--container .status span.statusTitle {
+    margin-right: 168px;
+}
+
+.information--container .identityNumber span.identityNumberTitle {
+    margin-right: 80px;
+}
+
+.information--container .registerDate span.registerDateTitle {
+    margin-right: 95px;
+}
+
+.information--container .quitDate span.quitDateTitle {
+    margin-right: 135px;
+}
+
+.information--container .BtnActions{
+    margin-top: 50px;
+    position: relative;
+}
+
+.information--container .BtnActions a.btn-back{
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-container.customers--search{
+    justify-content: end;
+}
+
+.search-container.orders{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+
+.search-container form {
+    width: 90%;
+    max-width: 500px;
+    height: 40px;
+    background: #e2e8e4;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+#searchStaffs {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+#searchCustomers {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #000;
+    font-size: 16px;
+    padding: 0 30px;
+}
+
+.search-container form button{
+    padding: 0 40px;
+    height: 100%;
+    background: #708B77;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+.search-container form button:hover{
+    background: rgb(1 1 1 / 10%);
+    color: #708B77;
+}
+
+
+
+.uploadAvatar{
+    width: 100px;
+    position: relative;
+    margin: auto;
+}
+
+    .uploadAvatar img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #708B77;
+    }
+
+.uploadAvatar .round{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #f77400;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.uploadAvatar .round:hover{
+    background-color: #fff;
+}
+
+.uploadAvatar .round input[type="file"]{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+input[type="file"]::-webkit-file-upload-button{
+    cursor: pointer;
+}
+
+.registerForm {
+    margin-top: 15px;
+    background-color: #E2E8E4;
+    border-radius: 5px;
+}
+
+.registerForm form{
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.registerForm .registerFormMain{
+    margin-top: 50px;
+}
+
+.propertyRegister{
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.radio-container{
+    display: flex;
+    width: 372px;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-title-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-container{
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+}
+
+.input-container:first-child{
+    margin-right: 50px;
+}
+
+.input-container input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+}
+
+.input-container .radio-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 2px solid #708B77;
+    font-size: 25px;
+    border-radius: 8px;
+    transition: all 300ms ease;
+    padding: 15px;
+}
+
+.input-container input:checked + .radio-title{
+    background-color: #708B77;
+    box-shadow: 0 0 12px #708B77;
+}
+
+.input-container input:hover + .radio-title{
+    box-shadow: 0 0 12px #708B77;
+}
+
+.btn-register {
+    background-color: #f77400;
+    padding: 5px 50px;
+}
+
+.registerButton-container {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.registerButton-container .btn-register{
+    margin-right: 5px;
+    color: #fff;
+}
+
+.registerButton-container .btn-register:hover{
+    background-color: #708B77;
+}
+
+.registerButton-container .btn-back{
+    background: #708B77;
+    color: #fff;
+    margin-right: 10px;
+    padding: 5px 50px;
+}
+
+.registerButton-container .btn-back:hover{
+    background: #f77400;
+}
+
+.link {
+    color: #f77400;
+}
+
+.link:hover {
+    color: #708B77;
+}

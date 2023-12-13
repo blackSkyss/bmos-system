@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="~/Images/BMOSLogo.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Site.css" asp-append-version="true" />
+    <link href="~/css/loadingstyle.css" rel="stylesheet" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <!--SideBar-->
+    @{
+        string role = ViewData["Role"] as string;
+        string page = @ViewData["Page"] as string;
+        string menuActive = "menuActive";
+    }
+    @if(role.ToLower().Equals("staff")){
+        <div class="sidebar">
+            <div class="logo">
+                <a href="/Staff/DashBoard">
+                    <img src="~/images/bmoslanding.png" />
+                </a>
+            </div>
+            <ul class="menu">
+                <li class="@if(page.ToLower().Equals("dashboard")){@menuActive}">
+                    <a href="/Staff/DashBoard">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="@if(page.ToLower().Equals("products")){@menuActive}">
+                    <a href="/Staff/Products">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li class="@if(page.ToLower().Equals("meals")){@menuActive}">
+                    <a href="/Staff/Meals">
+                        <i class="fa-solid fa-receipt"></i>
+                        <span>Meals</span>
+                    </a>
+                </li>
+                <li class="@if(page.ToLower().Equals("orders")){@menuActive}">
+                    <a href="/Staff/Orders">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="logout @if(page.ToLower().Equals("logout")){@menuActive}">
+                    <a onclick="Logout()" style="cursor: pointer;">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <h2>@ViewData["Title"]</h2>
+                </div>
+                <div class="user--info">
+                    <span>Welcome,<strong id="staffName"></strong></span>
+                </div>
+            </div>
+            <div class="main--container">
+                @RenderBody()
+                <div class="loading--part">
+                    <div class="loading--container">
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <span class="loading">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    @if (role.ToLower().Equals("storeowner"))
+    {
+        <div class="sidebar">
+            <div class="logo">
+                <a href="/StoreOwner/Dashboard">
+                    <img src="~/images/bmoslanding.png" />
+                </a>
+            </div>
+            <ul class="menu">
+                <li class="@if(page.ToLower().Equals("dashboard")){@menuActive}">
+                    <a href="/StoreOwner/Dashboard">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="@if(page.ToLower().Equals("wallet")){@menuActive}">
+                    <a href="/StoreOwner/Wallet">
+                        <i class="fa-solid fa-wallet"></i>
+                        <span>Wallet</span>
+                    </a>
+                </li>
+                <li class="@if(page.ToLower().Equals("customeraccounts")){@menuActive}">
+                    <a href="/StoreOwner/Customers">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Customer Accounts</span>
+                    </a>
+                </li>
+                <li class="@if(page.ToLower().Equals("staffaccounts")){@menuActive}">
+                    <a href="/StoreOwner/Staffs">
+                        <i class="fa-solid fa-clipboard-user"></i>
+                        <span>Staff Accounts</span>
+                    </a>
+                </li>
+                <li class="logout @if(page.ToLower().Equals("logout")){@menuActive}">
+                    <a onclick="Logout()" style="cursor: pointer;">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main--content">
+            <div class="header--wrapper">
+                <div class="header--title">
+                    <h2>@ViewData["Title"]</h2>
+                </div>
+                <div class="user--info">
+                    <span>Welcome,<strong id="storeOwnerName"></strong></span>
+                </div>
+            </div>
+            <div class="main--container">
+                @RenderBody()
+                <div class="loading--part">
+                    <div class="loading--container">
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <div class="ring"></div>
+                        <span class="loading">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <script src="https://kit.fontawesome.com/62731e1e20.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

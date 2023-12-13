@@ -1,0 +1,54 @@
+﻿@page
+@model BMOS.WebClient.Store.Pages.Staff.OrdersModel
+@{
+    ViewData["Title"] = "Orders";
+    ViewData["Page"] = "Orders";
+    ViewData["Role"] = "Staff";
+}
+@section Styles{
+    <link href="~/css/staffproductspageStyle.css" rel="stylesheet" />
+}
+    <div class="tabular--wrapper">
+        <div class="search-container orders">
+            <form method="get" onsubmit="return SearchCustomerName()">
+                <input type="text" id="searchProducts" placeholder="Search Customer name......" />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="table-container">
+            <table class="table table-hover text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Customer Email</th>
+                        <th scope="col">Ordered Date</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="ordersTable">
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <div></div>
+            <div class="numberPages">
+                <ul>
+                </ul>
+            </div>
+            <div class="numberOfBirdFoods">
+                <label for="numberOfBirdFoods"><strong>Orders:</strong></label>
+                <select id="numberOfBirdFoods">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+    </div>
+@section Scripts{
+    <script src="~/js/Orders.js"></script>
+}

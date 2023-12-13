@@ -1,0 +1,42 @@
+﻿@page "{id?}"
+@model BMOS.WebClient.Pages.BirdMealModel
+@{
+    ViewData["Title"] = "Bird Meal Detail";
+    ViewData["ActiveSegment"] = "Bird Meals";
+}
+@section Styles {
+<link href="~/css/birdmealPageStyle.css" rel="stylesheet" />
+}
+<div class="container">
+    <div class="row">
+        <div class="left">
+            <div class="mainImage">
+                <img src="" class="slide" />
+            </div>
+            <div class="row option image-item">
+            </div>
+        </div>
+        <div class="right">
+            <h2 id="title"></h2>
+            <div class="birdMealPrice-container">
+                <strong class="birdMealPrice-title">price: </strong><span id="birdMealPrice" style="color: #f77400; font-weight:bold;"></span> <strong class="birdMealPrice-unit">VNĐ / 1 Meal</strong>   
+            </div>
+            <div class="addToCart-container">
+                <span>Quantity: </span> <input type="number" value="1" id="numberOfBirdMeal" /> <button id="AddToCart">Add To Cart</button>
+            </div>
+            <h5><strong>Meal Details</strong></h5>
+            <div class="mealDetails">
+            </div>
+        </div>
+    </div>
+    <div class="row productMeals">
+        <div class="ProductMeals-Header">
+            <h3>Products In Meal</h3>
+        </div>
+        <div class="row products">
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/birdMeal.js"></script>
+}

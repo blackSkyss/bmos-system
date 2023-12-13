@@ -1,0 +1,289 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+body {
+    display: flex;
+}
+
+
+.card--container{
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card-profits{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.main--title {
+    color: #708b77;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.products--card{
+    background: rgb(229, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.products--card.profits{
+    width: 400px;
+    height: 120px;
+}
+
+.products--card:hover{
+    transform: translateY(-5px);
+}
+
+.card--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.amount-value {
+    font-size: 24px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+}
+
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: #708b77;
+}
+
+
+.chart {
+    margin-top: 1rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    padding-top: 15px;
+}
+
+.tabular--wrapper{
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table-container{
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background: #708b77;
+    color: #fff;
+}
+
+th{
+    padding: 15px;
+    text-align: center;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+
+td{
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+td a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+td a:hover{
+    color: #000;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
+
+.pagination, .paginationBoughtMeals, .paginationExpiredProducts, .paginationExpiredMeals {
+    display: flex;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+    user-select: none;
+    justify-content: space-between;
+}
+
+.pagination ul li, .paginationBoughtMeals ul li, .paginationExpiredProducts ul li, .paginationExpiredMeals ul li {
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+
+.pagination ul li a, .paginationBoughtMeals ul li a, .paginationExpiredProducts ul li a, .paginationExpiredMeals ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 40px;
+    background: none;
+    border: none;
+}
+
+.previous-page, .previous-pageBoughtMeals, .previous-pageExpiredProducts, .previous-pageExpiredMeals,
+.next-page, .next-pageBoughtMeals, .next-pageExpiredProducts, .next-pageExpiredMeals {
+    background: #708B77;
+    width: 100px;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.previous-page:hover, .previous-pageBoughtMeals:hover, .previous-pageExpiredProducts:hover, .previous-pageExpiredMeals:hover{
+    transform: translateX(-5px);
+}
+
+.next-page:hover, .next-pageBoughtMeals:hover, .next-pageExpiredProducts:hover, .next-pageExpiredMeals:hover{
+    transform: translateX(5px);
+}
+
+.curent-page, .curent-pageBoughtMeals, .curent-pageExpiredProducts, .curent-pageExpiredMeals,
+.dots, .dotsBoughtMeals, .dotsExpiredProducts, .dotsExpiredMeals {
+    background: #e2e8e4;
+    width: 60px;
+    width: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background: #708b77;
+}
+
+.disable {
+    background: #e2e8e4;
+}
+
+.birdFoods-Header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top:100px;
+    margin-bottom: 50px;
+}
+
+#numberOfBirdFoods, #numberOfExpiredMeals, #numberOfExpiredProducts, #numberOfBoughtMeals {
+    width: 80px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #E2E8E4;
+}
+
+#searchBirdFoods{
+    width: 500px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+#filterBirdFoods {
+    width: 170px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #E2E8E4;
+}
+
+
+.button-container{
+    display: flex;
+    justify-content: end;
+}
+
+.button-container .btn-updateProducts {
+    margin-right: 15px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-header select {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.chart .lineChart {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.chart .lineChart canvas {
+    /*position: absolute;*/
+    width: 100% !important;
+    height: 100% !important; 
+    display: block !important;
+    box-sizing: border-box !important;
+}
